@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Roboto&display=swap');
+
+* {
+  margin: 15px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+}
+
+body {
+  color: rgb(148, 147, 147);
+  background-color: #fafafa;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%2333d0d0' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  margin: 0;
+  padding: 8px;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+header {
+  color: rgb(41, 148, 235);
+  z-index: 10;
+  font-size: 48px;
+  font-family: Bungee Shade, sans-serif;
+  letter-spacing: 3px;
+  padding: 25px;
+  width: 100vw;
+  background: rgb(255, 255, 255 / 50%);
+}
+
+#exclamationMark {
+  color: rgb(0, 172, 0);
+}
+
+.subheader {
+  padding: 123123px;
+  top: 10px;
+  display: inline;
+}
+
+label {
+  display: block;
+}
+
+
+.form {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  border-bottom: 2px dashed #afafaf;
+  margin: 4rem auto 1rem;
+  transition: 500ms;
+}
+
+.label {
+  color: #d1d1d1;
+  font-size: 1.2rem;
+}
+
+span{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.input {
+  outline: none;
+  border: none;
+  overflow: hidden;
+  margin: 0;
+  width: 100%;
+  padding: 0.25rem 0;
+  background: none;
+  color: rgb(63, 63, 63);
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: border 500ms;
+}
+
+/* animação da borda */
+#form::after {
+  content: "";
+  position: relative;
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #00c711;
+  transform: scaleX(0);
+  transform-origin: 0%;
+  opacity: 0;
+  transition: all 500ms ease;
+  top: 2px;
+}
+
+#form:focus-within {
+  border-color: transparent;
+}
+
+#form:focus-within::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+/* Animação do label */
+
+.label {
+  z-index: -1;
+  position: absolute;
+  transform: translateY(-2rem);
+  transform-origin: 0%;
+  transition: transform 400ms;
+}
+
+#form:focus-within .label,
+.input:not(:placeholder-shown)+.label {
+  transform: scale(0.8) translateY(-5rem);
+  opacity: 1;
+}
+
+.todos {
+  display: inline;
+  background-color: transparent padding: 0;
+  list-style-type: none;
+}
+
+.todos li {
+  color:  rgb(41, 148, 235);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+}
+
+.todos li.completed {
+  color: #b6b6b6;
+  text-decoration: line-through;
+}
+
+small {
+  color: #929292;
+  margin-top: 3rem;
+  text-align: center;
+}
