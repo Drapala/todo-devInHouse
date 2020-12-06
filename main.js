@@ -36,9 +36,11 @@ function addTodo(todo) {
 
         todoEl.addEventListener('contextmenu', (e) => {
             e.preventDefault()
-
-            todoEl.remove()
-            updateLS()
+            if (confirm('Você realmente deseja deletar a tarefa?')) {           
+                todoEl.remove();
+              } else {
+                updateLS();
+              }
         })
 
         todosUL.appendChild(todoEl)
